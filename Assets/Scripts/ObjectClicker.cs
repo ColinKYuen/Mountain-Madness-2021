@@ -15,7 +15,19 @@ public class ObjectClicker : MonoBehaviour
     void OnMouseDown()
     {
         Debug.Log("Sprite Clicked");
+
+        // Grow then Shrink Object
+        transform.localScale = transform.localScale + new Vector3(0.1f, 0.1f, 0);
+        Invoke("ScaleObject", 0.5f);
+
+        // Spawn Apple
         spawnObject();
+    }
+
+    void ScaleObject()
+    {
+        // Transform (Shrink)
+        transform.localScale = transform.localScale + new Vector3(-0.1f, -0.1f, 0);
     }
 
     public void spawnObject()
