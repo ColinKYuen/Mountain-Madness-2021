@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class BacgkroundMusic : MonoBehaviour
 {
-    void Awake() {
+    void Awake()
+    {
         DontDestroyOnLoad(transform.gameObject);
     }
 }

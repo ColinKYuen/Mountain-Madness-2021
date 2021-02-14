@@ -31,13 +31,10 @@ public class ScoreManager : MonoBehaviour
 
     void Awake()
     {
-        if (!Instance)
-        {
+        if (!Instance) {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
+        } else {
             Destroy(gameObject);
         }
     }
@@ -45,15 +42,12 @@ public class ScoreManager : MonoBehaviour
     void Start()
     {
         SaveData sData = SaveSystem.LoadData();
-        if (sData != null)
-        {
+        if (sData != null) {
             totalApples = sData.totalApples;
             totalCarriers = sData.totalCarriers;
             totalBaskets = sData.totalBaskets;
             totalShakers = sData.totalShakers;
-        }
-        else
-        {
+        } else {
             totalApples = 0;
             totalCarriers = 1;
             totalBaskets = 1;

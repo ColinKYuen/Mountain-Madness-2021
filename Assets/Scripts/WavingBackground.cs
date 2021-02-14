@@ -6,26 +6,17 @@ public class WavingBackground : MonoBehaviour
 {
     private bool direction = false;
     private float duration = 0;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     void Update()
     {
-        if (duration >= 600)
-        {
+        if (duration >= 600) {
             direction = !direction;
             duration = 0;
         }
 
-        if (direction)
-        {
+        if (direction) {
             transform.Translate(Time.deltaTime * 0.25f, 0, 0);
-        }
-        else
-        {
+        } else {
             transform.Translate(-Time.deltaTime * 0.25f, 0, 0);
         }
         duration += 1;

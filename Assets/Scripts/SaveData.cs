@@ -21,16 +21,13 @@ public class SaveData
 
     public SaveData(bool wipe)
     {
-        if (wipe)
-        {
+        if (wipe) {
             ScoreManager sManager = ScoreManager.Instance;
             totalApples = 0;
             totalCarriers = 1;
             totalBaskets = 1;
             totalShakers = 0;
-        }
-        else
-        {
+        } else {
             ScoreManager sManager = ScoreManager.Instance;
             totalApples = sManager.totalApples;
             totalCarriers = sManager.totalCarriers;

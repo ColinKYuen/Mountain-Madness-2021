@@ -27,34 +27,31 @@ public class Store : MonoBehaviour
 
     public void BuyCarriers()
     {
-        if(sManager.totalApples >= carrierCost)
-        {
+        if (sManager.totalApples >= carrierCost) {
             sManager.totalCarriers += 1;
             sManager.totalApples -= carrierCost;
             carrierCost = 1 + (int)Math.Pow(2.0, (double)sManager.totalCarriers * 1.690);
             carrierText.text = carrierCost.ToString();
-        }        
+        }
     }
 
     public void BuyBaskets()
     {
-        if (sManager.totalApples >= basketCost)
-        {
+        if (sManager.totalApples >= basketCost) {
             sManager.totalBaskets += 1;
             sManager.totalApples -= basketCost;
             basketCost = 1 + (int)Math.Pow(2.0, (double)sManager.totalBaskets * 1.420);
             basketText.text = basketCost.ToString();
-        }        
+        }
     }
 
     public void BuyShakers()
     {
-        if (sManager.totalApples >= shakerCost)
-        {
+        if (sManager.totalApples >= shakerCost) {
             sManager.totalShakers += 1;
             sManager.totalApples -= shakerCost;
             shakerCost = 1 + (int)Math.Pow(2.0, (double)sManager.totalShakers * 1.69420);
             shakerText.text = shakerCost.ToString();
-        }        
+        }
     }
 }

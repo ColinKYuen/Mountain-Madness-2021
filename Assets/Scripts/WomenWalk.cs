@@ -13,10 +13,8 @@ public class WomenWalk : MonoBehaviour
     public Collider2D bounds;
     bool applePicked = false;
 
-    int applePickup; // how many apples each npc can pick up
+    int applePickup; // how many apples each NPC can pick up
 
-
-    // Start is called before the first frame update
     void Start()
     {
         sManager = ScoreManager.Instance;
@@ -27,44 +25,37 @@ public class WomenWalk : MonoBehaviour
         applePickup = sManager.totalBaskets;
     }
 
-    // Update is called once per frame
     void Update()
     {
         Move();
     }
-   
-    
+
+
     private void Move()
     {
         Vector3 temp = myTransform.position + directionVector * speed * Time.deltaTime;
-        if (bounds.bounds.Contains(temp))
-        {
+        if (bounds.bounds.Contains(temp)) {
             rb.MovePosition(temp);
+        } else {
+            ChangeDirection();
         }
-        else
-        {
-            ChangeDirection();  
-        }
-        
     }
 
     void ChangeDirection()
     {
         int direction = Random.Range(0, 1);
-        switch(direction)
-        {
+        switch(direction) {
             case 0: // walk right
                 directionVector = Vector3.right;
                 break;
-            case 1: //walk leftl
+            case 1: // walk left
                 directionVector = Vector3.left;
                 break;
             default:
                 break;
-
         }
     }
-    
+
     void UpdateAnimation()
     {
         anim.SetFloat("MoveX", directionVector.x);
@@ -76,19 +67,14 @@ public class WomenWalk : MonoBehaviour
         Vector3 temp = directionVector;
         ChangeDirection();
         int loops = 0;
-        while(temp == directionVector && loops < 100)
-        {
-            if(applePicked == false && other.gameObject.tag == "Apple")
-            {
-                if (applePickup > 1)
-                {
+        while (temp == directionVector && loops < 100) {
+            if (applePicked == false && other.gameObject.tag == "Apple") {
+                if (applePickup > 1) {
                     Destroy(other.gameObject);
                     print("Destroyed Apple");
                     sManager.totalApples += 1;
                     applePickup -= 1;
-                }
-                else
-                {
+                } else {
                     Destroy(other.gameObject);
                     print("Destroyed Apple");
                     applePicked = true;
@@ -99,5 +85,4 @@ public class WomenWalk : MonoBehaviour
             ChangeDirection();
         }
     }
-
 }

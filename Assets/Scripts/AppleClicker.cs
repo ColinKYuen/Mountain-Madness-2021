@@ -6,18 +6,33 @@ public class AppleClicker : MonoBehaviour
 {
     private ScoreManager sManager;
     private AudioSource audiosource;
+    private bool hasFallen = false;
     
-    void Start() {
+    void Start()
+    {
         audiosource = GetComponent<AudioSource>();
     }
     
     void OnMouseDown()
     {
-        sManager = ScoreManager.Instance;
-        Debug.Log("Apple Clicked");        
-        sManager.totalApples += 1;        
-        audiosource.PlayOneShot(audiosource.clip);
-        GetComponent<Renderer>().enabled = false;
-        Destroy(gameObject, audiosource.clip.length);
+        // Only allow clicking the Apple once it has fallen
+        if (hasFallen) {
+            sManager = ScoreManager.Instance;
+            Debug.Log("Apple Clicked");
+            sManager.totalApples += 1;        
+            audiosource.PlayOneShot(audiosource.clip);
+            GetComponent<Renderer>().enabled = false;
+            Destroy(gameObject, audiosource.clip.length);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        // Determine if Apple has fallen
+        Debug.Log(col.name);
+        if (col.gameObject.tag == "Ground") {
+            hasFallen = true;
+            Debug.Log("Apple Fell");
+        }
     }
 }
