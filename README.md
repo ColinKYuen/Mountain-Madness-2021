@@ -1,8 +1,8 @@
 # The Giving Tree
-A very casual clicker game and our group's first game using Unity!
+A very casual clicker game and Grandma Games's first using Unity!
 
 Created during Mountain Madness 2021!
-![GAME NAME](https://i.imgur.com/tlBdid2.png "GAME NAME")
+<img src="https://i.imgur.com/ZOJF1SK.png" width="1920" height"1080">
 
 
 ## Contributors
@@ -26,18 +26,21 @@ Contribution History tracked on Unity Collab, however, untracked on GitHub.
 3. Open Project in Unity
 4. Build and Run!
 
+OR
+
+Just click <a href=https://abhatthal.github.io/TheGivingTree/>HERE</> to play:
+
+
 ## Screenshots
-TODO
+<img src="https://i.imgur.com/tlBdid2.png" width="1920" height"1080">
 
 ## Credits
 ### Assets
-- [Assets 1](TODO)
-- [Assets 2](TODO)
-- [Assets 3](TODO)
+- [Characters](https://assetstore.unity.com/packages/2d/characters/gothicvania-town-101407)
+- [Background and Tree](https://assetstore.unity.com/packages/2d/characters/sunny-land-103349)
 ### Music / Sound Effects
-- [Music 1](TODO)
-- [Music 2](TODO)
-- [Music 3](TODO)
+- [Tree Shaking](https://otologic.jp/)
+- [Background Music](https://soundimage.org/positive-upbeat/)
 ### Unity Tutorials
 - [Brackeys!](https://www.youtube.com/channel/UCYbK_tjZ2OrIZFBvU6CCMiA)
 
