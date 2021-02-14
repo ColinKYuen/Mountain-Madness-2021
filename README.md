@@ -2,7 +2,7 @@
 A very casual clicker game and Grandma Games's first using Unity!
 
 Created during Mountain Madness 2021!
-<img src="https://i.imgur.com/ZOJF1SK.png" width="1920" height"1080">
+![Title](https://i.imgur.com/ZOJF1SK.png "Title")
 
 
 ## Contributors
@@ -28,11 +28,11 @@ Contribution History tracked on Unity Collab, however, untracked on GitHub.
 
 OR
 
-Just click <a href=https://abhatthal.github.io/TheGivingTree/>HERE</> to play:
+Just click <a href=https://abhatthal.github.io/TheGivingTree/>HERE</a> to play:
 
 
 ## Screenshots
-<img src="https://i.imgur.com/tlBdid2.png" width="1920" height"1080">
+![Game](https://i.imgur.com/tlBdid2.png "Game")
 
 ## Credits
 ### Assets
