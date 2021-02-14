@@ -8,4 +8,9 @@ public class SaveSystemHelper : MonoBehaviour
     {
         SaveSystem.SaveData();
     }
+
+    public void ResetHelper()
+    {
+        SaveSystem.ResetData();
+    }
 }

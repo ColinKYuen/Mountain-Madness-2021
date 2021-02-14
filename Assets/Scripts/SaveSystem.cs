@@ -34,5 +34,16 @@ public static class SaveSystem
             return null;
         }
     }
+
+    public static void ResetData()
+    {
+        string path = Application.persistentDataPath + "/Player.xyz";
+        BinaryFormatter formatter = new BinaryFormatter();
+        FileStream fstream = new FileStream(path, FileMode.Create);
+
+        SaveData data = new SaveData(true);
+        formatter.Serialize(fstream, data);
+        fstream.Close();
+    }
 }
 

@@ -14,8 +14,13 @@ public class TreeClicker : MonoBehaviour
 
     private AudioSource audiosource;
 
+    float spawnTimer = Random.Range(1f, 5f);
+    float timer = 0f;
+    private ScoreManager sManager;
+
     void Start()
     {
+        sManager = ScoreManager.Instance;
         npcList.Add(NPC);
         npcList.Add(NPC2);
         npcList.Add(NPC3);
@@ -26,7 +31,12 @@ public class TreeClicker : MonoBehaviour
 
     void Update()
     {
-
+        timer += Time.deltaTime;
+        if (timer > spawnTimer)
+        {
+            spawnNPC();
+            timer = 0;
+        }
     }
 
     void OnMouseDown()
@@ -61,9 +71,18 @@ public class TreeClicker : MonoBehaviour
         clickPosition.z = 0;
         // Spawn Object
         Instantiate(objToSpawn, clickPosition, Quaternion.identity);
+    }
 
+    public void spawnNPC()
+    {
         //Spawn NPCS
-        int prefabIndex = UnityEngine.Random.Range(0, 4);
-        Instantiate(npcList[prefabIndex], new Vector3(-48.92f, 90.73997f, 0f), Quaternion.identity);
+        for (int i = 0; i < sManager.totalCarriers; i++)
+        {
+            print("Spawned NPC");
+            int prefabIndex = UnityEngine.Random.Range(0, 4);
+            Instantiate(npcList[prefabIndex], new Vector3(-48.92f, 90.73997f, 0f), Quaternion.identity);
+        }
+        timer = 0f;
+        spawnTimer = Random.Range(3f, 6f);
     }
 }

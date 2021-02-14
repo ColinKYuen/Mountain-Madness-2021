@@ -5,11 +5,19 @@ using UnityEngine;
 public class AppleClicker : MonoBehaviour
 {
     private ScoreManager sManager;
+    private AudioSource audiosource;
+    
+    void Start() {
+        audiosource = GetComponent<AudioSource>();
+    }
+    
     void OnMouseDown()
     {
-        Debug.Log("Apple Clicked");
         sManager = ScoreManager.Instance;
-        sManager.totalApples += 1;
-        Destroy(gameObject);
+        Debug.Log("Apple Clicked");        
+        sManager.totalApples += 1;        
+        audiosource.PlayOneShot(audiosource.clip);
+        GetComponent<Renderer>().enabled = false;
+        Destroy(gameObject, audiosource.clip.length);
     }
 }

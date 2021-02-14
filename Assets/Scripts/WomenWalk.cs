@@ -13,6 +13,7 @@ public class WomenWalk : MonoBehaviour
     public Collider2D bounds;
     bool applePicked = false;
 
+    int applePickup; // how many apples each npc can pick up
 
 
     // Start is called before the first frame update
@@ -23,6 +24,7 @@ public class WomenWalk : MonoBehaviour
         myTransform = GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
         ChangeDirection();
+        applePickup = sManager.totalBaskets;
     }
 
     // Update is called once per frame
@@ -54,7 +56,7 @@ public class WomenWalk : MonoBehaviour
             case 0: // walk right
                 directionVector = Vector3.right;
                 break;
-            case 1: //walk left
+            case 1: //walk leftl
                 directionVector = Vector3.left;
                 break;
             default:
@@ -78,11 +80,20 @@ public class WomenWalk : MonoBehaviour
         {
             if(applePicked == false && other.gameObject.tag == "Apple")
             {
-                print(applePicked);
-                Destroy(other.gameObject);
-                print("Destroyed Apple");
-                applePicked = true;
-                sManager.totalApples += 1;
+                if (applePickup > 1)
+                {
+                    Destroy(other.gameObject);
+                    print("Destroyed Apple");
+                    sManager.totalApples += 1;
+                    applePickup -= 1;
+                }
+                else
+                {
+                    Destroy(other.gameObject);
+                    print("Destroyed Apple");
+                    applePicked = true;
+                    sManager.totalApples += 1;
+                }
             }
             loops++;
             ChangeDirection();
