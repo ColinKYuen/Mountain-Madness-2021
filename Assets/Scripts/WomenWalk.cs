@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WomenWalk : MonoBehaviour
 {
+    private ScoreManager sManager;
     private Vector3 directionVector;
     private Transform myTransform;
     public float speed;
@@ -17,6 +18,7 @@ public class WomenWalk : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        sManager = ScoreManager.Instance;
         anim = GetComponent<Animator>();
         myTransform = GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
@@ -80,6 +82,7 @@ public class WomenWalk : MonoBehaviour
                 Destroy(other.gameObject);
                 print("Destroyed Apple");
                 applePicked = true;
+                sManager.totalApples += 1;
             }
             loops++;
             ChangeDirection();

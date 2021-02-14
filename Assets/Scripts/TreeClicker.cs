@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectClicker : MonoBehaviour
+public class TreeClicker : MonoBehaviour
 {
     // Object To Spawn
     public GameObject objToSpawn;
@@ -12,8 +12,19 @@ public class ObjectClicker : MonoBehaviour
     public GameObject NPC4;
     List<GameObject> npcList = new List<GameObject>();
 
+    private AudioSource audiosource;
 
-    private void Update()
+    void Start()
+    {
+        npcList.Add(NPC);
+        npcList.Add(NPC2);
+        npcList.Add(NPC3);
+        npcList.Add(NPC4);
+        audiosource = GetComponent<AudioSource>();
+        audiosource.time = audiosource.clip.length * .9f;
+    }
+
+    void Update()
     {
 
     }
@@ -28,6 +39,7 @@ public class ObjectClicker : MonoBehaviour
 
         // Spawn Apple
         spawnObject();
+        audiosource.Play();
     }
 
     void ScaleObject()
@@ -38,6 +50,12 @@ public class ObjectClicker : MonoBehaviour
 
     public void spawnObject()
     {
+        bool trueOrFalse = (Random.value > 0.58f);
+        if (trueOrFalse)
+        {
+            return;
+        }
+
         // Spawn Location
         Vector3 clickPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         clickPosition.z = 0;
@@ -45,11 +63,6 @@ public class ObjectClicker : MonoBehaviour
         Instantiate(objToSpawn, clickPosition, Quaternion.identity);
 
         //Spawn NPCS
-        npcList.Add(NPC);
-        npcList.Add(NPC2);
-        npcList.Add(NPC3);
-        npcList.Add(NPC4);
-
         int prefabIndex = UnityEngine.Random.Range(0, 4);
         Instantiate(npcList[prefabIndex], new Vector3(-48.92f, 90.73997f, 0f), Quaternion.identity);
     }
