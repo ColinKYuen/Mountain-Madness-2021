@@ -28,7 +28,7 @@ Contribution History tracked on Unity Collab, however, untracked on GitHub.
 
 OR
 
-Just click <a href=https://abhatthal.github.io/TheGivingTree/>HERE</a> to play:
+Just click <a href=https://grandma-games.github.io/TheGivingTree/>HERE</a> to play:
 
 
 ## Screenshots
