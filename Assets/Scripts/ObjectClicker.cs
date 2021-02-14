@@ -6,6 +6,12 @@ public class ObjectClicker : MonoBehaviour
 {
     // Object To Spawn
     public GameObject objToSpawn;
+    public GameObject NPC;
+    public GameObject NPC2;
+    public GameObject NPC3;
+    public GameObject NPC4;
+    List<GameObject> npcList = new List<GameObject>();
+
 
     private void Update()
     {
@@ -37,5 +43,14 @@ public class ObjectClicker : MonoBehaviour
         clickPosition.z = 0;
         // Spawn Object
         Instantiate(objToSpawn, clickPosition, Quaternion.identity);
+
+        //Spawn NPCS
+        npcList.Add(NPC);
+        npcList.Add(NPC2);
+        npcList.Add(NPC3);
+        npcList.Add(NPC4);
+
+        int prefabIndex = UnityEngine.Random.Range(0, 4);
+        Instantiate(npcList[prefabIndex], new Vector3(-48.92f, 90.73997f, 0f), Quaternion.identity);
     }
 }

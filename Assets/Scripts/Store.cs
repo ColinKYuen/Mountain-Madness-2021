@@ -9,41 +9,53 @@ public class Store : MonoBehaviour
     public TextMeshProUGUI basketText;
     public TextMeshProUGUI shakerText;
 
-    public int totalCarriers = 0;
-    public int totalBaskets = 0;
-    public int totalShakers = 0;
-    public int score = 0;
+    private ScoreManager sManager;
+    private int carrierCost;
+    private int basketCost;
+    private int shakerCost;
+
+    void Start()
+    {
+        sManager = ScoreManager.Instance;
+        carrierCost = 1 + (int)Math.Pow(2.0, Math.Pow(2.0, (double)sManager.totalCarriers * 5));
+        basketCost = 1 + (int)Math.Pow(2.0, Math.Pow(2.0, (double)sManager.totalBaskets * 2));
+        shakerCost = 1 + (int)Math.Pow(2.0, Math.Pow(2.0, (double)sManager.totalShakers * 5));
+        carrierText.text = carrierCost.ToString();
+        basketText.text = basketCost.ToString();
+        shakerText.text = shakerCost.ToString();
+    }
 
     public void BuyCarriers()
     {
-        int carrierCost = (int)Math.Pow(2.0, Math.Pow(2.0, (double)totalCarriers * 5));
-        if(score >= carrierCost)
+        if(sManager.totalApples >= carrierCost)
         {
-            totalCarriers += 1;
-            score -= carrierCost;
+            sManager.totalCarriers += 1;
+            sManager.totalApples -= carrierCost;
+            carrierCost = 1 + (int)Math.Pow(2.0, Math.Pow(2.0, (double)sManager.totalCarriers * 5));
+            carrierText.text = carrierCost.ToString();
         }
-        carrierText.text = carrierCost.ToString();
+        
     }
 
     public void BuyBaskets()
     {
-        int basketCost = (int)Math.Pow(2.0, Math.Pow(2.0, (double)totalBaskets * 2));
-        if (score >= basketCost)
+        if (sManager.totalApples >= basketCost)
         {
-            totalBaskets += 1;
-            score -= basketCost;
-        }
-        basketText.text = basketCost.ToString();
+            sManager.totalBaskets += 1;
+            sManager.totalApples -= basketCost;
+            basketCost = 1 + (int)Math.Pow(2.0, Math.Pow(2.0, (double)sManager.totalBaskets * 2));
+            basketText.text = basketCost.ToString();
+        }        
     }
 
     public void BuyShakers()
     {
-        int shakerCost = (int)Math.Pow(2.0, Math.Pow(2.0, (double)totalShakers * 5));
-        if (score >= shakerCost)
+        if (sManager.totalApples >= shakerCost)
         {
-            totalShakers += 1;
-            score -= shakerCost;
-        }
-        shakerText.text = shakerCost.ToString();
+            sManager.totalShakers += 1;
+            sManager.totalApples -= shakerCost;
+            shakerCost = 1 + (int)Math.Pow(2.0, Math.Pow(2.0, (double)sManager.totalShakers * 5));
+            shakerText.text = shakerCost.ToString();
+        }        
     }
 }

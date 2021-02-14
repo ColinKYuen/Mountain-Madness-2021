@@ -67,22 +67,23 @@ public class WomenWalk : MonoBehaviour
         anim.SetFloat("MoveY", directionVector.y);
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         Vector3 temp = directionVector;
         ChangeDirection();
         int loops = 0;
         while(temp == directionVector && loops < 100)
         {
-            print("Collided");
-            if(applePicked == false)
+            if(applePicked == false && other.gameObject.tag == "Apple")
             {
                 print(applePicked);
                 Destroy(other.gameObject);
+                print("Destroyed Apple");
                 applePicked = true;
             }
             loops++;
             ChangeDirection();
         }
     }
+
 }
