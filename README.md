@@ -1,5 +1,5 @@
-# GAME NAME
-GAME NAME, a casual clicker game.
+# The Giving Tree
+A very casual clicker game and our group's first game using Unity!
 
 Created during Mountain Madness 2021!
 ![GAME NAME](https://i.imgur.com/tlBdid2.png "GAME NAME")
