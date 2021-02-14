@@ -22,11 +22,11 @@ public class WavingBackground : MonoBehaviour
 
         if (direction)
         {
-            transform.Translate(Time.deltaTime * 0.5f, 0, 0);
+            transform.Translate(Time.deltaTime * 0.25f, 0, 0);
         }
         else
         {
-            transform.Translate(-Time.deltaTime * 0.5f, 0, 0);
+            transform.Translate(-Time.deltaTime * 0.25f, 0, 0);
         }
         duration += 1;
     }

@@ -10,6 +10,7 @@ public class WomenWalk : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
     public Collider2D bounds;
+    bool applePicked = false;
 
 
 
@@ -74,6 +75,12 @@ public class WomenWalk : MonoBehaviour
         while(temp == directionVector && loops < 100)
         {
             print("Collided");
+            if(applePicked == false)
+            {
+                print(applePicked);
+                Destroy(other.gameObject);
+                applePicked = true;
+            }
             loops++;
             ChangeDirection();
         }
