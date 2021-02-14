@@ -8,34 +8,17 @@ Created during Mountain Madness 2021!
 ## Contributors
 Contribution History tracked on Unity Collab
 - Akash Bhatthal
-<div style="width:150px; height:150px">
-[![GitHub](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png "GitHub")](https://github.com/abhatthal)
-</div>
-<div style="width:150px; height:150px">
-[![Linkedin](https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg "LinkedIn")](https://www.linkedin.com/in/akash-bhatthal/)
-</div>
+<a href="https://github.com/abhatthal"><img src"https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" title="GitHub" width="150" height="150"/></a>
+<a href="https://www.linkedin.com/in/akash-bhatthal/"><img src"https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg" alt="LinkedIn" title="LinkedIn" width="150" height="150"/></a>
 - Granton Lo
-<div style="width:150px; height:150px">
-[![GitHub](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png "GitHub")](https://github.com/granbraan) 
-</div>
-<div style="width:150px; height:150px">
-[![Linkedin](https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg "LinkedIn")](https://www.linkedin.com/in/granton-lo-0589a5140/)
-</div>
-- Adrienne Kwan 
-<div style="width:150px; height:150px">
-[![GitHub](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png "GitHub")](https://github.com/papashirogane) 
-</div>
-<div style="width:150px; height:150px">
-[![Linkedin](https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg0 "LinkedIn")](https://www.linkedin.com/in/akwan/)
-</div>
+<a href="https://github.com/granbraan"><img src"https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" title="GitHub" width="150" height="150"/></a>
+<a href="https://www.linkedin.com/in/granton-lo-0589a5140/"><img src"https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg" alt="LinkedIn" title="LinkedIn" width="150" height="150"/></a>
+- Adrienne Kwan
+<a href="https://github.com/papashirogane"><img src"https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" title="GitHub" width="150" height="150"/></a>
+<a href="https://www.linkedin.com/in/akwan/"><img src"https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg" alt="LinkedIn" title="LinkedIn" width="150" height="150"/></a>
 - Colin Yuen 
-<div style="width:150px; height:150px">
-[GitHub]
-[![GitHub](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png "GitHub")](https://github.com/ColinKYuen) 
-</div>
-<div style="width:150px; height:150px">
-[![Linkedin](https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg "LinkedIn")](https://www.linkedin.com/in/colinyuen)
-</div>
+<a href="https://github.com/ColinKYuen"><img src"https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" title="GitHub" width="150" height="150"/></a>
+<a href="https://www.linkedin.com/in/colinyuen"><img src"https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg" alt="LinkedIn" title="LinkedIn" width="150" height="150"/></a>
 
 ## Getting Started
 1. Have [Unity](https://unity.com/) and basic knowledge of Unity
