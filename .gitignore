@@ -41,8 +41,10 @@ ExportedObj/
 sysinfo.txt
 
 # Builds
+The\ Giving\ Tree
 *.apk
 *.unitypackage
 
 # Crashlytics generated file
 crashlytics-build.properties
+

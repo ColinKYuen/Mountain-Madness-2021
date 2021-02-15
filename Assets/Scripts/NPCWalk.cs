@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WomenWalk : MonoBehaviour
+public class NPCWalk : MonoBehaviour
 {
     private ScoreManager sManager;
     private Vector3 directionVector;
@@ -25,11 +25,11 @@ public class WomenWalk : MonoBehaviour
         applePickup = sManager.totalBaskets;
     }
 
-    void Update()
+    void FixedUpdate()
     {
+        // Move NPCs at a constant pace
         Move();
     }
-
 
     private void Move()
     {
@@ -62,21 +62,19 @@ public class WomenWalk : MonoBehaviour
         anim.SetFloat("MoveY", directionVector.y);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D col)
     {
         Vector3 temp = directionVector;
         ChangeDirection();
         int loops = 0;
         while (temp == directionVector && loops < 100) {
-            if (applePicked == false && other.gameObject.tag == "Apple") {
+            if (!applePicked && col.gameObject.tag == "Apple") {
                 if (applePickup > 1) {
-                    Destroy(other.gameObject);
-                    print("Destroyed Apple");
+                    Destroy(col.gameObject);
                     sManager.totalApples += 1;
                     applePickup -= 1;
                 } else {
-                    Destroy(other.gameObject);
-                    print("Destroyed Apple");
+                    Destroy(col.gameObject);
                     applePicked = true;
                     sManager.totalApples += 1;
                 }

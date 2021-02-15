@@ -15,19 +15,19 @@ public class ScoreManager : MonoBehaviour
     public int totalApples;
     public int totalCarriers;
     public int totalBaskets;
-    public int totalShakers;
+    // public int totalShakers;
 
     // Main Game
     public TextMeshProUGUI scoreGame;
     public TextMeshProUGUI carriersGame;
     public TextMeshProUGUI basketsGame;
-    public TextMeshProUGUI shakersGame;
+    // public TextMeshProUGUI shakersGame;
 
     // Store
     public TextMeshProUGUI scoreStore;
     public TextMeshProUGUI carriersStore;
     public TextMeshProUGUI basketsStore;
-    public TextMeshProUGUI shakersStore;
+    // public TextMeshProUGUI shakersStore;
 
     void Awake()
     {
@@ -46,12 +46,12 @@ public class ScoreManager : MonoBehaviour
             totalApples = sData.totalApples;
             totalCarriers = sData.totalCarriers;
             totalBaskets = sData.totalBaskets;
-            totalShakers = sData.totalShakers;
+            // totalShakers = sData.totalShakers;
         } else {
             totalApples = 0;
             totalCarriers = 1;
             totalBaskets = 1;
-            totalShakers = 0;
+            // totalShakers = 0;
         }
         InvokeRepeating("SaveGame", 0.5f, 60.0f);
     }
@@ -62,13 +62,13 @@ public class ScoreManager : MonoBehaviour
         scoreGame.text = totalApples.ToString();
         carriersGame.text = "Carriers: " + totalCarriers.ToString();
         basketsGame.text = "Baskets: " + totalBaskets.ToString();
-        shakersGame.text = "Shakers: " + totalShakers.ToString();
+        // shakersGame.text = "Shakers: " + totalShakers.ToString();
         
         // Store
         scoreStore.text = totalApples.ToString();
         carriersStore.text = "Carriers: " + totalCarriers.ToString();
         basketsStore.text = "Baskets: " + totalBaskets.ToString();
-        shakersStore.text = "Shakers: " + totalShakers.ToString();
+        // shakersStore.text = "Shakers: " + totalShakers.ToString();
     }
 
     void SaveGame()

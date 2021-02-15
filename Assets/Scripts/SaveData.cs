@@ -8,7 +8,7 @@ public class SaveData
     public int totalApples;
     public int totalCarriers;
     public int totalBaskets;
-    public int totalShakers;
+    // public int totalShakers;
 
     public SaveData()
     {
@@ -16,7 +16,7 @@ public class SaveData
         totalApples = sManager.totalApples;
         totalCarriers = sManager.totalCarriers;
         totalBaskets = sManager.totalBaskets;
-        totalShakers = sManager.totalShakers;
+        // totalShakers = sManager.totalShakers;
     }
 
     public SaveData(bool wipe)
@@ -26,13 +26,13 @@ public class SaveData
             totalApples = 0;
             totalCarriers = 1;
             totalBaskets = 1;
-            totalShakers = 0;
+            // totalShakers = 0;
         } else {
             ScoreManager sManager = ScoreManager.Instance;
             totalApples = sManager.totalApples;
             totalCarriers = sManager.totalCarriers;
             totalBaskets = sManager.totalBaskets;
-            totalShakers = sManager.totalShakers;
+            // totalShakers = sManager.totalShakers;
         }
     }
 }
