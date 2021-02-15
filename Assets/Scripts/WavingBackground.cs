@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿// Move the sky and sea in background
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

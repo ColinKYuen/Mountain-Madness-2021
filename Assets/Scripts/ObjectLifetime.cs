@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿// Determines how long an item exists before it's despawned
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

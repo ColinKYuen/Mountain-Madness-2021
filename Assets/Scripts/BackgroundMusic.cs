@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿// Play game music
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

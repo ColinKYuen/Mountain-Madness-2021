@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 4241327471221178663}
   - component: {fileID: 5004552293960622854}
   m_Layer: 0
-  m_Name: NPC - Hatman
+  m_Name: NPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -227,7 +227,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: a6adcfb84d9054ac486ef7a10722243d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -270,8 +270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37ce4c6ba4f890a40bdb8ff7e6b60e55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  bounds: {fileID: 1024736640637905173}
+  speed: 6
 --- !u!50 &4241327471221178663
 Rigidbody2D:
   serializedVersion: 4

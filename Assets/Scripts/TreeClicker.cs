@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿// Allow player to click on tree to spawn apples
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

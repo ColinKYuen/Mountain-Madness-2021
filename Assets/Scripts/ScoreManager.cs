@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿// Singleton to maintain score and game information
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;

@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿// Save data using the SaveSystem
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿// Initial scene with game play, options, and quit
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;

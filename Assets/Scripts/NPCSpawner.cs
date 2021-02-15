@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿// Spawns NPCs regularly
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,7 +13,7 @@ public class NPCSpawner : MonoBehaviour
     public GameObject NPC4;
     List<GameObject> npcList = new List<GameObject>();
 
-    private ScoreManager sManager;
+    ScoreManager sManager;
     float spawnTimer;
     float timer = 0f;
 
@@ -39,9 +41,10 @@ public class NPCSpawner : MonoBehaviour
         // Spawn NPCS
         for (int i = 0; i < sManager.totalCarriers; i++) {
             int prefabIndex = UnityEngine.Random.Range(0, 4);
-            Instantiate(npcList[prefabIndex], new Vector3(-48.92f - (3f * i), 90.73997f, 0f), Quaternion.identity);
+            GameObject newNPC = Instantiate(npcList[prefabIndex], new Vector3(-48.92f - (3f * i), 90.73997f, 0f), Quaternion.identity);
+            // newNPC.transform.GetChild(0).gameObject.GetComponent<NPCWalk>().applesPicked = 0;
         }
         timer = 0f;
-        spawnTimer = Random.Range(3f, 6f);
+        spawnTimer = Random.Range(4f, 10f);
     }
 }

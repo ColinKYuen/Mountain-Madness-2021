@@ -1,13 +1,15 @@
-﻿using System.Collections;
+﻿// Allow the player to manually click on apples
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class AppleClicker : MonoBehaviour
 {
-    private ScoreManager sManager;
-    private AudioSource audiosource;
-    private bool hasFallen = false;
-    private bool hasBeenClicked = false;
+    ScoreManager sManager;
+    AudioSource audiosource;
+    bool hasFallen = false;
+    bool hasBeenClicked = false;
     
     void Start()
     {
@@ -16,7 +18,6 @@ public class AppleClicker : MonoBehaviour
     
     void OnMouseDown()
     {
-        Debug.Log("Apple Clicked");
         // Only allow clicking the Apple once it has fallen
         if (hasFallen && !hasBeenClicked) {
             hasBeenClicked = true;
@@ -31,7 +32,6 @@ public class AppleClicker : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col)
     {
         // Determine if Apple has fallen
-        Debug.Log(col.name);
         if (col.gameObject.tag == "Ground") {
             hasFallen = true;
         }

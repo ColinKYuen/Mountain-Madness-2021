@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿// Menu for controlling resolution and save data
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;

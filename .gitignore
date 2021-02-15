@@ -41,10 +41,9 @@ ExportedObj/
 sysinfo.txt
 
 # Builds
-The\ Giving\ Tree
+WebGL\ Build
 *.apk
 *.unitypackage
 
 # Crashlytics generated file
 crashlytics-build.properties
-

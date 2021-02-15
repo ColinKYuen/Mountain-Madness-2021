@@ -1,4 +1,6 @@
-﻿using System;
+﻿// Allow player to buy upgrades using apples
+
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;

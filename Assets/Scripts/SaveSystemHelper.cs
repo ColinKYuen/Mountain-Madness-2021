@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿// Helpers for SaveSystem
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
