@@ -7,13 +7,13 @@ You can use the apples to purchase more NPCs to pick up apples for you and more 
 Inspired by the short story, "The Giving Tree" by Shel Silverstein.
 
 
- <a href=https://abhatthal.github.io/TheGivingTree/><b>PLAY NOW</b></a>
+ <a href="https://abhatthal.github.io/the-giving-tree/"><b>PLAY NOW</b></a>
 
 
 ## Building
 If you'd like to play this game locally or on any platform you'd like, the code is open source so you can build it yourself.
 1. Install [Unity](https://unity.com/)
-2. Download [source code](https://github.com/grandma-games/TheGivingTree-src/archive/v1.0.2.zip)
+2. Download [source code](https://github.com/abhatthal/the-giving-tree/releases)
 3. Build and run
 
 
