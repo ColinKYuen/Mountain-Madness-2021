@@ -7,7 +7,7 @@ You can use the apples to purchase more NPCs to pick up apples for you and more 
 Inspired by the short story, "The Giving Tree" by Shel Silverstein.
 
 
- <a href=https://grandma-games.github.io/TheGivingTree/><b>PLAY NOW</b></a>
+ <a href=https://abhatthal.github.io/TheGivingTree/><b>PLAY NOW</b></a>
 
 
 ## Building
